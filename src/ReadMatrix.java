@@ -16,8 +16,8 @@ public class ReadMatrix extends SumTwoMatrix{
 
   public static void main(String[] args) {
 
-    String input = "{{1,2,3,5}, {4, 5,6,5},{7,8,9,5}}";
-    //String input = args[0];
+    //String input = "{{1,2,3,5}, {4, 5,6,5},{7,8,9,5}}";
+    String input = args[0];
 
     String line = "(\\{\\d+(,\\s*\\d+)*\\})";
 

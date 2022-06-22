@@ -9,11 +9,11 @@ public class MatrixCombined extends ReadMatrix{
 
   public static void main(String[] args) {
 
-    //String input1 = args[0];
-    //String input2 = args[1];
+    String input1 = args[0];
+    String input2 = args[1];
 
-    String input1 = "{{1,2,3},{1,2,3},{1,2,3}}";
-    String input2 = "{{1,2,3},{1,6,3},{1,2,3}}";
+    //String input1 = "{{1,2,3},{1,2,3},{1,2,3}}";
+    //String input2 = "{{1,2,3},{1,6,3},{1,2,3}}";
 
     int[][] matrix1 = createMatrix(input1);
     int[][] matrix2 = createMatrix(input2);
