@@ -50,34 +50,49 @@ public class SumTwoMatrix {
 
   public static void printSpecialFormat(int[][] sumMatrix) {
 
+    int lines = sumMatrix.length;
+    int rows = sumMatrix[0].length;
+
+    int lineNum = 0;
+
     System.out.println("{");
 
-    for (int[] line: sumMatrix) {
+    for (int[] arrayLine: sumMatrix) {
 
-      //printLine(line);
-      System.out.println(Arrays.toString(line));
+      if (lineNum < lines - 1) {
+        System.out.println(printLine(arrayLine, rows) + ",");
+      } else {
+        System.out.println(printLine(arrayLine, rows));
+      }
 
+      lineNum++;
     }
 
     System.out.println("}");
   }
 
-  private static void printLine(int[] line) {
+  private static String printLine(int[] array, int rows) {
 
-    System.out.print("{");
+    int rowNum = 0;
 
-    for (int num: line) {
-      System.out.print(num + ", ");
+    String line = "";
+
+    for (int num: array) {
+      if (rowNum < rows - 1) {
+        line += num + ", ";
+      } else {
+        line += num;
+      }
+      rowNum++;
     }
-
-    System.out.println("}");
+    return "{" + line +"}";
   }
 
-  private static boolean sameDimension(int[][] matrix1, int[][] matrix2) {
+  public static boolean sameDimension(int[][] matrix1, int[][] matrix2) {
     return (matrix1[0].length == matrix2[0].length) && (matrix1.length == matrix2.length);
   }
 
-  private static int[][] sumTwoMatrix(int[][] matrix1, int[][] matrix2) {
+  public static int[][] sumTwoMatrix(int[][] matrix1, int[][] matrix2) {
 
     int[][] sumMatrix = new int[matrix1.length][matrix1[0].length];
 

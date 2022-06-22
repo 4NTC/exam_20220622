@@ -23,7 +23,7 @@ public class SumMatrixValues {
 
   }
 
-  private static void sumMatrix(int[][] matrix) {
+  public static void sumMatrix(int[][] matrix) {
 
     int[] lineSum = new int[matrix.length];
 
@@ -34,7 +34,7 @@ public class SumMatrixValues {
       index++;
     }
 
-    System.out.println("Sum of all int contained in the matrix: " + sumValues(lineSum));
+    System.out.println("SUM: " + sumValues(lineSum));
 
   }
 
